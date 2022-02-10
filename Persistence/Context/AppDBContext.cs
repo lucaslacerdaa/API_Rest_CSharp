@@ -37,6 +37,7 @@ namespace api_rest.Persistence.Context
             builder.Entity<Product>().HasKey(p => p.Id);
             builder.Entity<Product>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Product>().Property(p => p.Name).IsRequired().HasMaxLength(50);
+            builder.Entity<Product>().Property(p => p.Url).IsRequired().HasMaxLength(200);
             builder.Entity<Product>().Property(p => p.QuantityInPackage).IsRequired();
             builder.Entity<Product>().Property(p => p.UnitOfMeasurement).IsRequired();
 
@@ -48,6 +49,7 @@ namespace api_rest.Persistence.Context
                     Name = "Harry Potter e o Prisioneiro de Azkaban",
                     QuantityInPackage = 1,
                     UnitOfMeasurement = EUnitOfMeasurement.Unity,
+                    Url= "https://www.google.com/",
                     CategoryId = 100,
                 },
                 new Product
@@ -56,6 +58,7 @@ namespace api_rest.Persistence.Context
                     Name = "Breves respostas para grandes questões",
                     QuantityInPackage = 2,
                     UnitOfMeasurement = EUnitOfMeasurement.Unity,
+                    Url = "https://www.google.com/",
                     CategoryId = 101,
                 },
                 new Product
@@ -64,6 +67,7 @@ namespace api_rest.Persistence.Context
                     Name = "Sprint. Criação em cinco dias",
                     QuantityInPackage = 2,
                     UnitOfMeasurement = EUnitOfMeasurement.Unity,
+                    Url = "https://www.google.com/",
                     CategoryId = 99,
                 },
                 new Product
@@ -72,6 +76,7 @@ namespace api_rest.Persistence.Context
                     Name = "Uma Breve História do Tempo",
                     QuantityInPackage = 2,
                     UnitOfMeasurement = EUnitOfMeasurement.Unity,
+                    Url = "https://www.google.com/",
                     CategoryId = 101,
                 }
             );

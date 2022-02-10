@@ -13,6 +13,8 @@ namespace api_rest.Domain.Models
         public short QuantityInPackage { get; set; }
         public EUnitOfMeasurement UnitOfMeasurement { get; set; }
 
+        public string Url { get; set; }
+
         public int CategoryId { get; set; }
         public Category Category { get; set; }
     }
